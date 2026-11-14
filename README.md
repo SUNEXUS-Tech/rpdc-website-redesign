@@ -1,40 +1,56 @@
-# RPDC Limited — Proposed Website Frontend
+# RPDC Limited — Website Redesign Prototype
 
-A presentation-only React + Vite prototype created by SUNEXUS from publicly available RPDC website information.
+A React + Vite redesign prototype developed by SUNEXUS using RPDC's publicly accessible website archive supplied for this project.
+
+## Release
+
+- Prototype version: **0.2.0**
+- Branch: `main`
+- Stack: React 19, Vite, React Router 7, Lucide React
+- Design: responsive editorial-style real estate experience
 
 ## Run locally
+
 ```bash
 npm install
 npm run dev
 ```
-Open the local URL printed by Vite.
 
 ## Production build
+
 ```bash
 npm run build
 npm run preview
 ```
 
-## Pages
+## Routes
+
 - `/` — Homepage
-- `/about` — About RPDC
-- `/developments` — Project portfolio with category filters
-- `/developments/:slug` — Individual project detail pages
-- `/insights` — Editorial concept cards
-- `/contact` — Contact details and a demonstration-only enquiry form
+- `/about` — Company profile, vision, mission and core values
+- `/developments` — Featured projects with category filters
+- `/developments/:slug` — Project detail, features and image gallery
+- `/team` — Board and management overview
+- `/insights` — Links to published RPDC articles
+- `/faq` — Frequently asked questions
+- `/contact` — Contact details and demonstration enquiry form
 
-## Important prototype limitations
-- This is a frontend concept, not an approved or production RPDC website.
-- Contact form submissions are not transmitted or stored.
-- Project prices, availability, legal/title information, construction status, completion dates and specifications are intentionally omitted or marked for verification.
-- Architectural photographs are illustrative stock imagery, not confirmed photographs of RPDC developments.
-- Confirm RPDC's brand assets, approved copy, project facts, contact information, social profiles and image usage rights before launch.
-- No WordPress, CRM, payment, analytics or backend integrations are included.
+## Source material and assets
 
-## Stack
-React 19, React Router, Vite, Lucide React and custom responsive CSS.
+The prototype references selected RPDC images and logo files from RPDC's public WordPress media library at `https://rpdcltd.com/wp-content/uploads/`. These references were identified in the downloaded website archive provided for the redesign. The application currently loads those images from RPDC's website rather than bundling copies locally.
 
-## Release
-Version: `0.1.0` — initial frontend prototype.
+The project copy is based on pages and content in the supplied archive, including the Home, About, Projects, Team, Contacts, FAQ, project detail pages and published articles.
 
-Developed by **SUNEXUS**.
+## Important verification notes
+
+- RPDC has authorised use of its existing logos, photographs, project renders and team portraits for this redesign.
+- Confirm current board and management appointments, approved biographies, project status, completion dates, unit availability, pricing, title/legal information and contact details before production.
+- Beacon Apartments Phase 2's source page listed May 2026 as expected completion; this is a historical target, not a verified completion status.
+- The source archive contains differing marketing-count claims (including 50+ and 250+). These have not been promoted as a verified single metric in this prototype.
+- The enquiry form is demonstration-only. It does not send or store submissions.
+- Some social links and email routing need RPDC confirmation.
+- External image URLs depend on RPDC's media server remaining accessible.
+- No backend, CRM, payment, analytics or CMS integration is included.
+
+## Credits
+
+Designed and developed by **SUNEXUS**.
