@@ -1,0 +1,8 @@
+import React from "react";
+import {Link,useParams,Navigate} from "react-router-dom";
+import {ArrowLeft,ArrowUpRight,MapPin} from "lucide-react";
+import {projects} from "../data";
+export default function Project(){
+ const {slug}=useParams(); const p=projects.find(x=>x.slug===slug); if(!p)return <Navigate to="/developments"/>;
+ return <><section className="project-hero"><img src={p.image} alt=""/><div className="project-hero-shade"/><div className="container project-hero-content"><Link className="back-link" to="/developments"><ArrowLeft size={16}/> All developments</Link><div className="section-kicker light-eyebrow">{p.category} DEVELOPMENT</div><h1>{p.name}</h1><p><MapPin size={16}/>{p.location}</p></div></section><section className="section-pad"><div className="container detail-grid"><div><div className="section-kicker">PROJECT OVERVIEW</div><h2 className="detail-heading">A place for<br/><em>what's next.</em></h2></div><div className="detail-body"><p className="lead">{p.description}</p><div className="fact-grid">{p.facts.map(f=><div className="fact" key={f.label}><small>{f.label}</small><b>{f.value}</b></div>)}</div><div className="status-note"><b>Information note</b><p>{p.status}. Contact RPDC for the latest approved project information. This concept page intentionally does not publish unverified pricing or availability.</p></div><Link className="button button-dark" to="/contact">Enquire about this project <ArrowUpRight size={16}/></Link></div></div></section><section className="image-break"><img src={p.image} alt="Project visual"/></section></>
+}
